@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using tabuleiro;
+using xadrex_console;
 
 namespace xadrez_console { 
     class Program
@@ -9,7 +10,10 @@ namespace xadrez_console {
         {
             Tabuleiro tab = new Tabuleiro(8, 8);
 
+            Tela.ImprimirTabuleiro(tab);
             Console.WriteLine();
+
+
         }
     }
 }
