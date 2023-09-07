@@ -26,9 +26,7 @@ namespace xadrex_console
             {
                 Console.WriteLine("XEQUEMATE!");
                 Console.WriteLine("Vencedor: " + partida.JogadorAtual);
-            }
-
-            
+            }  
         }
 
         public static void ImprimirPecasCapturadas(PartidaDeXadrez partida)
