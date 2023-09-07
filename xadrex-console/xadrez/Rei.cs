@@ -101,7 +101,7 @@ namespace xadrez
                     Posicao p1 = new Posicao(Posicao.Linha, Posicao.Coluna - 1);
                     Posicao p2 = new Posicao(Posicao.Linha, Posicao.Coluna - 2);
                     Posicao p3 = new Posicao(Posicao.Linha, Posicao.Coluna - 3);
-                    if (Tab.Peca(p1) == null && Tab.Peca(p2) == null && Tab.Peca(p3) == null
+                    if (Tab.Peca(p1) == null && Tab.Peca(p2) == null && Tab.Peca(p3) == null)
                     {
                         mat[Posicao.Linha, Posicao.Coluna - 2] = true;
                     }
