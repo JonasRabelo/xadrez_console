@@ -110,7 +110,7 @@ namespace xadrez
             //#JogadaEspecial EnPassant
             if (p is Peao)
             {
-                if (origem.Coluna != destino.Coluna && pecaCapturada == null)
+                if (origem.Coluna != destino.Coluna && pecaCapturada == VuneralEnPassant)
                 {
                     Peca peao = tab.RetirarPeca(destino);
                     Posicao posP;
@@ -170,7 +170,7 @@ namespace xadrez
             
 
             // #JogadaEspecial EnPassant
-            if (p is Peao && destino.Linha == origem.Linha - 2 && destino.Linha == origem.Linha - 2)
+            if (p is Peao && (destino.Linha == origem.Linha - 2 || destino.Linha == origem.Linha + 2))
             {
                 VuneralEnPassant = p;
             }

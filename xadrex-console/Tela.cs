@@ -39,16 +39,17 @@ namespace xadrex_console
             Console.ForegroundColor = ConsoleColor.Yellow;
             ImprimirConjunto(partida.PecasCapturadas(Cor.Preta));
             Console.ForegroundColor = aux;
+            Console.WriteLine();
         }
 
         public static void ImprimirConjunto(HashSet<Peca> conjunto)
         {
-            Console.Write("{");
+            Console.Write("[");
             foreach (Peca x in conjunto)
             {
                 Console.Write(x + " ");
             }
-            Console.WriteLine("}");
+            Console.WriteLine("]");
         }
 
         public static void ImprimirTabuleiro(Tabuleiro tab)

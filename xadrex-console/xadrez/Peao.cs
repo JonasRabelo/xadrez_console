@@ -5,8 +5,9 @@ namespace xadrez
     class Peao : Peca
     {
         private PartidaDeXadrez Partida;
-        public Peao(Tabuleiro tabuleiro, Cor cor, PartidaDeXadrez partida) : base(tabuleiro, cor) { 
-            Partida = partida; 
+        public Peao(Tabuleiro tabuleiro, Cor cor, PartidaDeXadrez partida) : base(tabuleiro, cor)
+        {
+            Partida = partida;
         }
 
         public override string ToString()
@@ -17,7 +18,7 @@ namespace xadrez
         private bool ExisteInimigo(Posicao pos)
         {
             Peca p = Tab.Peca(pos);
-            return p == null || p.Cor != Cor;
+            return p != null && p.Cor != Cor;
         }
 
         private bool Livre(Posicao pos)
@@ -38,7 +39,8 @@ namespace xadrez
                     mat[pos.Linha, pos.Coluna] = true;
                 }
                 pos.DefinirValores(Posicao.Linha - 2, Posicao.Coluna);
-                if (Tab.PosicaoValida(pos) && Livre(pos) && QteMovimentos == 0)
+                Posicao p2 = new Posicao(Posicao.Linha - 1, Posicao.Coluna);
+                if (Tab.PosicaoValida(pos) && Livre(pos) && QteMovimentos == 0 && Tab.PosicaoValida(p2) && Livre(p2))
                 {
                     mat[pos.Linha, pos.Coluna] = true;
                 }
@@ -75,7 +77,8 @@ namespace xadrez
                     mat[pos.Linha, pos.Coluna] = true;
                 }
                 pos.DefinirValores(Posicao.Linha + 2, Posicao.Coluna);
-                if (Tab.PosicaoValida(pos) && Livre(pos) && QteMovimentos == 0)
+                Posicao p2 = new Posicao(Posicao.Linha + 1, Posicao.Coluna);
+                if (Tab.PosicaoValida(pos) && Livre(pos) && QteMovimentos == 0 && Tab.PosicaoValida(p2) && Livre(p2))
                 {
                     mat[pos.Linha, pos.Coluna] = true;
                 }
@@ -105,7 +108,7 @@ namespace xadrez
                 }
             }
             return mat;
-            
+
         }
     }
 }
