@@ -22,6 +22,8 @@ Compile e execute o programa.
 
 O jogo de xadrez será exibido na tela.
 
+Para fazer um movimento, utilize as coordenadas do tabuleiro, que variam de a1 até h8. Por exemplo, para mover um peão da casa a2 para a4, você digitaria a2 como a casa de partida e a4 como a casa de destino.
+Lembre-se de que os movimentos devem seguir as regras legais do xadrez, e o jogo irá notificar quando você estiver em xeque, xeque-mate ou empate. Boa sorte e divirta-se!
 
 ## Funcionalidades:
 
